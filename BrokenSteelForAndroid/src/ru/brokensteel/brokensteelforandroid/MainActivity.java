@@ -1,10 +1,12 @@
 package ru.brokensteel.brokensteelforandroid;
 
 import android.os.Bundle;
-import android.app.Activity;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 
-public class MainActivity extends Activity {
+public class MainActivity extends ActionBarActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -19,4 +21,9 @@ public class MainActivity extends Activity {
 		return true;
 	}
 
+	@Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Log.d("MENU", "Cliced MenuItem is " + item.getTitle());
+        return super.onOptionsItemSelected(item);
+    }
 }
