@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sabd="http://schemas.android.com/apk/res-auto" >
+
+    <!--
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings" android:checkable="false" android:enabled="true" android:visible="true"/>
+	-->
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:icon="@android:drawable/ic_menu_add"
+        sabd:showAsAction="always" />
+    <item
+        android:id="@+id/action_item_1"
+        android:title="@string/action_item_1"
+        android:icon="@android:drawable/ic_menu_delete"
+        sabd:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_item_2"
+        android:title="@string/action_item_2"
+        android:icon="@android:drawable/ic_menu_add"
+        sabd:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/action_item_3"
+        android:title="@string/action_item_3"
+        android:icon="@android:drawable/ic_menu_add"
+        sabd:showAsAction="never" />
+    
+</menu>
