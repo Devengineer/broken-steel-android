@@ -8,5 +8,7 @@
     <string name="action_item_1">Item 1</string>
 	<string name="action_item_2">Item 2</string>
 	<string name="action_item_3">Item 3</string>
+	
+	<string name="action_search">Search</string>
 
 </resources>
