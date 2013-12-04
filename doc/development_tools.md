@@ -1,3 +1,2 @@
 ##Development:
-* IDE Android Studio
-* JDK v. 7.0
+* Eclipse IDE with built-in ADT (Android Developer Tools)
