@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Broken Steel</string>
+    <string name="app_name">Broken Steel New</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world! Test</string>
+    <string name="test_text">Test</string>
     
     <string name="action_item_1">Item 1</string>
 	<string name="action_item_2">Item 2</string>

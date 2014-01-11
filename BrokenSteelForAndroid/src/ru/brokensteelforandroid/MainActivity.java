@@ -1,4 +1,4 @@
-package ru.brokensteel.brokensteelforandroid;
+package ru.brokensteelforandroid;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -32,7 +32,7 @@ public class MainActivity extends ActionBarActivity implements OnQueryTextListen
 		
 		mTitle = "Broken Steel";
 		 
-        mPlanetTitles = new String[]{"one", "two", "three"};
+        mPlanetTitles = new String[]{"Home", "Starred", "Categories", "About"};
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
  
@@ -51,12 +51,14 @@ public class MainActivity extends ActionBarActivity implements OnQueryTextListen
         ) {
  
             /** Called when a drawer has settled in a completely closed state. */
-            public void onDrawerClosed(View view) {
+            @Override
+			public void onDrawerClosed(View view) {
                 getSupportActionBar().setTitle(mTitle);
             }
  
             /** Called when a drawer has settled in a completely open state. */
-            public void onDrawerOpened(View drawerView) {
+            @Override
+			public void onDrawerOpened(View drawerView) {
                 getSupportActionBar().setTitle(mTitle);
             }
         };
@@ -106,12 +108,14 @@ public class MainActivity extends ActionBarActivity implements OnQueryTextListen
         return super.onOptionsItemSelected(item);
     }
 	
+	@Override
 	public boolean onQueryTextChange(String text_new) {
         Log.d("QUERY", "New text is " + text_new);
         return true;
     }
 
-    public boolean onQueryTextSubmit(String text) {
+    @Override
+	public boolean onQueryTextSubmit(String text) {
         Log.d("QUERY", "Search text is " + text);
         return true;
     }
@@ -136,7 +140,7 @@ public class MainActivity extends ActionBarActivity implements OnQueryTextListen
  
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
         @Override
-        public void onItemClick(AdapterView parent, View view, int position, long id) {
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             selectItem(position);
         }
     }
